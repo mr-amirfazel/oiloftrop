@@ -8,7 +8,6 @@ export const LockLayout: FC = () => {
   const [time, setTime] = useState(new Date());
   const [unlocking, setUnlocking] = useState(false);
 
-  // Update clock every minute
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 1000 * 60);
     return () => clearInterval(interval);
@@ -18,7 +17,7 @@ export const LockLayout: FC = () => {
     setUnlocking(true);
     setTimeout(() => {
       navigate("/desktop");
-    }, 800); // match animation duration
+    }, 800); 
   };
 
   return (
