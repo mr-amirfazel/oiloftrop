@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
-
+import { HiMiniWifi } from "react-icons/hi2";
+import { BatteryIcon } from "../../BatteryViewer";
 
 export const Taskbar: FC = () => {
   const [time, setTime] = useState<string>("");
@@ -43,10 +44,14 @@ export const Taskbar: FC = () => {
       {/* Right side system tray */}
       <div className="flex items-center gap-4 ml-auto text-white">
         {/* Wi-Fi */}
-        <span className="text-lg">📶</span>
+        <span className="text-2xl">
+          <HiMiniWifi />
+        </span>
 
         {/* Battery */}
-        <span className="text-lg">🔋</span>
+        <span className="text-2xl">
+          <BatteryIcon />
+        </span>
 
         {/* Time + Date */}
         <div className="flex flex-col items-end leading-tight">
