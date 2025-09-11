@@ -30,12 +30,12 @@ export const Taskbar: FC = () => {
           <img
             src="https://img.icons8.com/?size=100&id=TuXN3JNUBGOT&format=png&color=000000"
             alt="Start"
-            className="w-6 h-6"
+            className="w-9 h-9"
           />
         </button>
 
         {/* Search button */}
-        <button className="w-9 h-9 flex items-center justify-center hover:bg-white/20 rounded-md transition">
+        <button className="w-9 h-9 flex items-center justify-center hover:bg-white/20 rounded-md transition text-xl">
           🔍
         </button>
       </div>
