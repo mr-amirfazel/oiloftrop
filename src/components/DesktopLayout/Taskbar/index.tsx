@@ -2,9 +2,15 @@ import { FC, useEffect, useState } from "react";
 import { HiMiniWifi } from "react-icons/hi2";
 import { BatteryIcon } from "../../BatteryViewer";
 
+import windows from '../../../assets/images/Windows.png';
+import { useWindowManager } from "../../../context/WindowManagerContext";
+
 export const Taskbar: FC = () => {
   const [time, setTime] = useState<string>("");
   const [date, setDate] = useState<string>("");
+
+    const ctx = useWindowManager();
+  
 
   useEffect(() => {
     const update = () => {
@@ -29,7 +35,7 @@ export const Taskbar: FC = () => {
         {/* Start button */}
         <button className="w-9 h-9 flex items-center justify-center hover:bg-white/20 rounded-md transition">
           <img
-            src="https://img.icons8.com/?size=100&id=TuXN3JNUBGOT&format=png&color=000000"
+            src={windows}
             alt="Start"
             className="w-9 h-9"
           />
@@ -39,6 +45,14 @@ export const Taskbar: FC = () => {
         <button className="w-9 h-9 flex items-center justify-center hover:bg-white/20 rounded-md transition text-xl">
           🔍
         </button>
+
+        <div className="flex gap-3">
+          {ctx.windows
+          .map(w => 
+          <div className="border-y-indigo-400 cursor-pointer rounded-xs hover:bg-gray-400" onClick={() => ctx.updateWindow(w.instanceId, {minimized: !w.minimized})}>
+            <img className="w-9 h-9" src={w.image}/>
+          </div>)}
+        </div>
       </div>
 
       {/* Right side system tray */}
