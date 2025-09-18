@@ -3,6 +3,12 @@ import type { FC } from "react";
 import { useRef } from "react";
 import type { WindowInstance } from "../../context/WindowManagerContext";
 
+import maximize from '../../assets/images/maximize.png';
+import maxmin from '../../assets/images/maxmin.png';
+import close from '../../assets/images/close.png';
+import minimize from '../../assets/images/minimize.png';
+
+
 type Props = {
   instance: WindowInstance;
   children: React.ReactNode;
@@ -97,11 +103,11 @@ export const WindowShell: FC<Props> = ({
     >
       {/* Title bar */}
       <div
-        className="flex items-center justify-between px-3 py-2 bg-gradient-to-b from-gray-100 to-gray-50 cursor-move select-none"
+        className="flex items-center justify-between px-3 py-2 bg-gray-800 cursor-move select-none text-white"
         onPointerDown={startDrag}
       >
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-sm bg-neutral-200 flex items-center justify-center text-xs">
+          <div className="w-6 h-6 rounded-sm flex items-center justify-center text-xs">
             <img src={instance.image} alt="window icon" />
           </div>
           <div className="font-medium text-sm">{instance.title}</div>
@@ -113,10 +119,10 @@ export const WindowShell: FC<Props> = ({
               e.stopPropagation();
               onMinimize();
             }}
-            className="w-8 h-8 rounded hover:bg-gray-200 flex items-center justify-center"
+            className="w-8 h-8 rounded hover:bg-gray-600 flex items-center justify-center"
             title="Minimize"
           >
-            🗕
+            <img className="invert-100 w-5 h-5" src={minimize} alt="close" />
           </button>
 
           <button
@@ -124,10 +130,10 @@ export const WindowShell: FC<Props> = ({
               e.stopPropagation();
               onToggleMaximize();
             }}
-            className="w-8 h-8 rounded hover:bg-gray-200 flex items-center justify-center"
+            className="w-8 h-8 rounded hover:bg-gray-600 flex items-center justify-center"
             title="Maximize"
           >
-            🗖
+            <img className="invert-100 w-5 h-5 " src={instance.maximized ? maximize : maxmin} alt="maximize"  />
           </button>
 
           <button
@@ -138,7 +144,7 @@ export const WindowShell: FC<Props> = ({
             className="w-8 h-8 rounded hover:bg-red-500 hover:text-white flex items-center justify-center"
             title="Close"
           >
-            ✕
+            <img className="invert-100 w-5 h-5" src={close} alt="close" />
           </button>
         </div>
       </div>

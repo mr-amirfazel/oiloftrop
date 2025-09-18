@@ -49,7 +49,7 @@ export const Taskbar: FC = () => {
         <div className="flex gap-3">
           {ctx.windows
           .map(w => 
-          <div className="border-y-indigo-400 cursor-pointer rounded-xs hover:bg-gray-400" onClick={() => ctx.updateWindow(w.instanceId, {minimized: !w.minimized})}>
+          <div className="bg-gray-400  cursor-pointer rounded-xs hover:bg-cyan-700" onClick={() => ctx.updateWindow(w.instanceId, {minimized: !w.minimized})}>
             <img className="w-9 h-9" src={w.image}/>
           </div>)}
         </div>
