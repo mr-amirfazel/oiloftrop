@@ -150,7 +150,7 @@ export const WindowShell: FC<Props> = ({
       </div>
 
       {/* Content area */}
-      <div className="p-4 overflow-auto h-[calc(100%-48px)] bg-white">
+      <div className=" overflow-auto h-[calc(100%-48px)] bg-white">
         {children}
       </div>
 
