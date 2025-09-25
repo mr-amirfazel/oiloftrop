@@ -12,7 +12,7 @@ export const HomePage: FC = () => {
     const window = desktopItems.filter(item => item.id == id);
     if(window.length == 0) return;
     const Comp = window[0].component;
-    openWindow({...window[0], component: <Comp />, allowMultiple: false, width:1500, height:700})
+    openWindow({...window[0], component: <Comp />, allowMultiple: false, width:1350, height:850})
   };
   
     return (
