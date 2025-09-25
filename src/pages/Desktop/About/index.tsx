@@ -13,7 +13,10 @@ import { SiReact, SiAngular,
   SiMysql , SiGit, SiGo
 } from 'react-icons/si';
 import { VerticalTimeline } from "@/components/VerticalTimeLine";
-import { education, workExperience } from "@/constants/about";
+import { education, interests, workExperience } from "@/constants/about";
+import FlowingMenu from "@/components/FlowingMenu";
+
+
 
 
 const techLogos = [
@@ -107,13 +110,45 @@ export const About = () => {
             {/* </div> */}
           </AboutSection>
 
+          <GlowDivider />
+
+
           <AboutSection title="Experience">
             <VerticalTimeline items={workExperience}/>
           </AboutSection>
 
+          <GlowDivider />
+
           <AboutSection title="Education">
             <VerticalTimeline items={education}/>
           </AboutSection>
+
+          <GlowDivider />
+
+          <AboutSection title="Interests (changing day by day)">
+            {/* <ul>
+              <li>Distributed Systems</li>
+              <li>Distributed Databases</li>
+              <li>Cloud Computing</li>
+              <li>Operating Systems</li>
+              <li>Data Retreival Engines</li>
+            </ul> */}
+            {/* <div className="flex flex-wrap gap-3">
+            {interests.map((interest, idx) => (
+              <span
+                key={idx}
+                className="px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium border border-white/20 backdrop-blur-md shadow-sm hover:bg-white/20 transition"
+              >
+                {interest}
+              </span>
+            ))}
+          </div> */}
+          <div className="h-[600px] relative rounded-lg overflow-clip">
+            <FlowingMenu items={interests} />
+          </div>
+          </AboutSection>
+
+          <GlowDivider />
           
       </div>
        
