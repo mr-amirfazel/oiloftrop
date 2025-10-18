@@ -2,8 +2,9 @@ import { FC, useEffect, useState } from "react";
 import { HiMiniWifi } from "react-icons/hi2";
 import { BatteryIcon } from "../../BatteryViewer";
 
-import windows from '../../../assets/images/Windows.png';
+
 import { useWindowManager } from "../../../context/WindowManagerContext";
+import { StartMenu } from "@/components/startMenu";
 
 export const Taskbar: FC = () => {
   const [time, setTime] = useState<string>("");
@@ -34,11 +35,8 @@ export const Taskbar: FC = () => {
       <div className="absolute left-1/2 -translate-x-1/2 flex gap-6">
         {/* Start button */}
         <button className="w-9 h-9 flex items-center justify-center hover:bg-white/20 rounded-md transition">
-          <img
-            src={windows}
-            alt="Start"
-            className="w-9 h-9"
-          />
+          
+          <StartMenu />
         </button>
 
         {/* Search button */}

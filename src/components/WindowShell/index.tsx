@@ -85,6 +85,7 @@ export const WindowShell: FC<Props> = ({
         top: 0,
         width: instance.size.width,
         height: instance.size.height,
+        zIndex: '20'
       }
     : {
         position: "absolute",
@@ -92,6 +93,7 @@ export const WindowShell: FC<Props> = ({
         top: instance.position.y,
         width: instance.size.width,
         height: instance.size.height,
+        zIndex: '20'
       };
 
   return (
