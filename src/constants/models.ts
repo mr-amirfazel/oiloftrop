@@ -13,5 +13,13 @@ export interface TimelineItem {
     subtitle?: string;   // e.g. "Google"
     period: string;      // e.g. "2021 - Present"
     description?: string;
-  }
+}
+
+export interface StartMenuIconModel {
+    id: string;
+    title: string;
+    image: React.ImgHTMLAttributes<HTMLImageElement>["src"],
+    onClick?: Function,
+    component?: React.ComponentType
+}
   
