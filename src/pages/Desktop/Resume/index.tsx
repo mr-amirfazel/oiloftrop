@@ -40,21 +40,17 @@ export const Resume: FC = () => {
       </a>
 
       {/* PDF Viewer */}
-      <div className="flex flex-col gap-4 *:w-full max-w-fit bg-white shadow-lg rounded-xl border-amber-300 h-fit p-4">
-        <Document file={resume} onLoadSuccess={onDocumentLoadSuccess}>
-          {Array.from(new Array(numPages), (_el, index) => (
-            <div className="shadow-md rounded-md border-amber-300 mb-4 border-2">
-              <Page 
-            key={`page_${index + 1}`} 
-            pageNumber={index + 1} 
-            renderTextLayer={false} 
-            renderAnnotationLayer={false} 
-            className='p-2'
-          />
-            </div>
-          ))}
-        </Document>
-      </div>
+      <div className="flex flex-col gap-4 w-full bg-white shadow-lg rounded-xl border-amber-300 p-4 min-h-screen">
+      <object
+        data={resume}
+        type="application/pdf"
+        className="w-full h-full flex-1"
+      >
+        {/* Fallback text */}
+        <p>Your browser doesn't support embedded PDFs. <a href={resume}>Download the file</a>.</p>
+      </object>
+    </div>
+
     </div>
     );
 };
