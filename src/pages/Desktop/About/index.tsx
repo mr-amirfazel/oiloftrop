@@ -13,7 +13,7 @@ import { SiReact, SiAngular,
   SiMysql , SiGit, SiGo
 } from 'react-icons/si';
 import { VerticalTimeline } from "@/components/VerticalTimeLine";
-import { description, education, interests, titles, workExperience } from "@/constants/about";
+import { description, education, interests, pfp, titles, workExperience } from "@/constants/about";
 import FlowingMenu from "@/components/FlowingMenu";
 import { FaGithub, FaMedium, FaLinkedin, FaTelegram, FaEnvelope  } from "react-icons/fa";
 import RotatingText from "@/components/RotatingText";
@@ -68,7 +68,7 @@ export const About = () => {
             <div className="flex-shrink-0">
               <img
                 className="w-28 h-28 rounded-full ring-4 ring-white/20 shadow-md"
-                src="https://media.licdn.com/dms/image/v2/C4E03AQFNEFmmV-lo7A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1644563621354?e=1761177600&v=beta&t=riMB_yMDdkR24ET9S4m03yfxlb-_JHzVS_GfiUiK8OI"
+                src={pfp}
                 alt="Amirfazel"
               />
             </div>
