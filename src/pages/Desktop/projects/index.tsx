@@ -1,5 +1,4 @@
 import InfiniteMenu from "@/components/InfiniteMenu";
-import type { FC } from "react";
 
 import { items } from "@/constants/projects";
 

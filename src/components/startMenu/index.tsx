@@ -6,6 +6,7 @@ import { SiReact, SiAngular, SiGo } from "react-icons/si";
 import windows from '../../assets/images/Windows.png';
 import { startMenuItems } from "@/constants/start";
 import { useWindowManager } from "@/context/WindowManagerContext";
+import { pfp } from "@/constants/about";
 
 export const StartMenu = () => {
   const [open, setOpen] = useState(false);
@@ -49,7 +50,7 @@ export const StartMenu = () => {
                <div className="flex-shrink-0">
               <img
                 className="w-10 h-10 rounded-full ring-4 ring-white/20 shadow-md"
-                src="https://media.licdn.com/dms/image/v2/C4E03AQFNEFmmV-lo7A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1644563621354?e=1761177600&v=beta&t=riMB_yMDdkR24ET9S4m03yfxlb-_JHzVS_GfiUiK8OI"
+                src={pfp}
                 alt="Amirfazel"
               />
             </div>
