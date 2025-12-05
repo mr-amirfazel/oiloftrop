@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaUserCircle, FaPowerOff } from "react-icons/fa";
-import { SiReact, SiAngular, SiGo } from "react-icons/si";
+import { FaPowerOff } from "react-icons/fa";
 
 import windows from '../../assets/images/Windows.png';
 import { startMenuItems } from "@/constants/start";
@@ -15,7 +14,7 @@ export const StartMenu = () => {
   const openById = (id: string) => {
       const window = startMenuItems.filter(item => item.id == id);
       if(window.length == 0) return;
-      const Comp = window[0].component;
+      const Comp = window[0].component!;
       openWindow({...window[0], component: <Comp />, allowMultiple: false, width:1350, height:850})
     };
 

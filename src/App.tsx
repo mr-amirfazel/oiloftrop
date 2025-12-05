@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
-import { HomePage } from './pages/Desktop'
 import { Routing } from './routes'
 
 function App() {
