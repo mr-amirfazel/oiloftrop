@@ -1,4 +1,4 @@
-import type { DesktopIconModel, StartMenuIconModel } from "./models";
+import type { StartMenuIconModel } from "./models";
 
 import  profile  from "../assets/images/profile.png";
 import  resume  from "../assets/images/resume.png";

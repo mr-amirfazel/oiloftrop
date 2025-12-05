@@ -1,5 +1,3 @@
-import type { FC } from "react";
-import LetterGlitch from '../../../components/LetterGlitch';
 import Silk from '../../../components/Silk';
 import BlurText from "@/components/BlurText";
 import ScrambledText from "@/components/ScrambledText";
@@ -17,7 +15,6 @@ import { description, education, interests, pfp, titles, workExperience } from "
 import FlowingMenu from "@/components/FlowingMenu";
 import { FaGithub, FaMedium, FaLinkedin, FaTelegram, FaEnvelope  } from "react-icons/fa";
 import RotatingText from "@/components/RotatingText";
-import SplashCursor from "@/components/SplashCursor";
 
 
 

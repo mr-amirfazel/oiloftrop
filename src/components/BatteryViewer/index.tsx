@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { type FC, useEffect, useState } from "react";
 import { PiBatteryFullFill } from "react-icons/pi";
 import { IoBatteryCharging } from "react-icons/io5";
 import { FaBatteryHalf } from "react-icons/fa";
