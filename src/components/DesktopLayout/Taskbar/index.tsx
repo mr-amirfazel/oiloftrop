@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { type FC, useEffect, useState } from "react";
 import { HiMiniWifi } from "react-icons/hi2";
 import { BatteryIcon } from "../../BatteryViewer";
 
